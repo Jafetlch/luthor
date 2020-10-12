@@ -9,7 +9,7 @@ import {
   StyledTableBody
 } from '../../components/TableComponent'
 
-import { API_ROUTES } from '../../constants/apiRoutes'
+import { API_ROUTES } from '../../Constants/apiRoutes'
 
 import { StyledH2 } from '../../styles/StyledH2'
 import { StyledCard } from '../../styles/StyledCard'
@@ -18,7 +18,7 @@ import { Navigation } from '../../layout/Navigation'
 import { StyledSpacer } from '../../styles/StyledSpacer'
 import { StyledContainer } from '../../styles/StyledContainer'
 import { requestService } from '../../services/requestService'
-import { defaultColors } from '../../constants/statusColor'
+import { defaultColors } from '../../Constants/statusColor'
 import { NoDataComponent } from '../../components/NoDataComponent'
 import { LoadingComponent } from '../../components/LoadingComponent'
 import { ButtonComponent } from '../../components/ButtonComponent'

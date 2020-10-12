@@ -3,18 +3,18 @@ import { useHistory } from 'react-router-dom'
 import { axios } from '../plugins/axios'
 
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined'
-import TextField from '@material-ui/core/es/TextField'
+import { TextField } from '@material-ui/core'
 
 import { Copyright } from '../components/Copyright'
 import { StyledStatusBar } from '../styles/StyledStatusBar'
 import { StyledSpacer } from '../styles/StyledSpacer'
-import { userStatusColor } from '../constants/statusColor'
+import { userStatusColor } from '../Constants/statusColor'
 import { ButtonComponent } from '../components/ButtonComponent'
 import { StyledTypography } from '../styles/StyledTypography'
 import { StyledAvatar } from '../styles/StyledAvatar'
 import { StyledCard } from '../styles/StyledCard'
 import { StyledContainer } from '../styles/StyledContainer'
-import { API_ROUTES } from '../constants/apiRoutes'
+import { API_ROUTES } from '../Constants/apiRoutes'
 import { useUserValues } from '../context/UserContext'
 
 export const Login = ({ location }) => {

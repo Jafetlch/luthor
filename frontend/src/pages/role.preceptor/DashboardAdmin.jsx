@@ -21,7 +21,7 @@ import { IcoButtonComponent } from '../../components/IcoButtonComponent'
 import { preceptorRoutes } from '../../routes'
 import { useUserValues } from '../../context/UserContext'
 import { requestService } from '../../services/requestService'
-import { API_ROUTES } from '../../constants/apiRoutes'
+import { API_ROUTES } from '../../Constants/apiRoutes'
 // import { Navigation } from '../../layout/Navigation'
 
 export const DashboardAdmin = () => {

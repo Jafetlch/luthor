@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 
 import ExpandMore from '@material-ui/icons/ExpandMore'
 
-import { API_ROUTES } from '../../constants/apiRoutes'
+import { API_ROUTES } from '../../Constants/apiRoutes'
 
 import { Navigation } from '../../layout/Navigation'
 import { ButtonComponent } from '../../components/ButtonComponent'

@@ -6,7 +6,7 @@ import MoreVertIcon from '@material-ui/icons/MoreVert'
 import { LogoLarge } from '../components/LogoLarge'
 import { LinkComponent } from '../components/LinkComponent'
 import { axios } from '../plugins/axios'
-import { API_ROUTES } from '../constants/apiRoutes'
+import { API_ROUTES } from '../Constants/apiRoutes'
 import { logoutService } from '../services/authService'
 
 export const Navigation = () => {

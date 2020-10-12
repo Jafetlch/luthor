@@ -14,7 +14,7 @@ import { StyledH2 } from '../../styles/StyledH2'
 import { StyledContainer } from '../../styles/StyledContainer'
 import { ButtonComponent } from '../../components/ButtonComponent'
 import { requestService } from '../../services/requestService'
-import { API_ROUTES } from '../../constants/apiRoutes'
+import { API_ROUTES } from '../../Constants/apiRoutes'
 import { StyledCard } from '../../styles/StyledCard'
 import { LoadingComponent } from '../../components/LoadingComponent'
 import { NoDataComponent } from '../../components/NoDataComponent'
@@ -24,7 +24,7 @@ import { StyledBackButton } from '../../styles/StyledBackButton'
 import { TextLabelContent } from '../../components/TextLabelContent'
 import { axios } from '../../plugins/axios'
 import { useUserValues } from '../../context/UserContext'
-import { defaultColors } from '../../constants/statusColor'
+import { defaultColors } from '../../Constants/statusColor'
 
 export const ValidateWeekends = () => {
   const { user } = useUserValues()

@@ -12,12 +12,12 @@ import { StyledH2 } from '../../styles/StyledH2'
 import { ButtonComponent } from '../../components/ButtonComponent'
 import { StyledTypography } from '../../styles/StyledTypography'
 import { requestService } from '../../services/requestService'
-import { API_ROUTES } from '../../constants/apiRoutes'
+import { API_ROUTES } from '../../Constants/apiRoutes'
 import { LoadingComponent } from '../../components/LoadingComponent'
 import { NoDataComponent } from '../../components/NoDataComponent'
 import { StyledCard } from '../../styles/StyledCard'
 import { StyledSpan } from '../../styles/StyledSpan'
-import { userStatusColor } from '../../constants/statusColor'
+import { userStatusColor } from '../../Constants/statusColor'
 
 export const StudentsOut = () => {
   const [expanded, setExpanded] = useState(false)

@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react'
 
 import Select from '@material-ui/core/es/Select'
 import MenuItem from '@material-ui/core/es/MenuItem'
-import TextField from '@material-ui/core/es/TextField'
+import { TextField } from '@material-ui/core'
 import InputLabel from '@material-ui/core/es/InputLabel'
 import FormControl from '@material-ui/core/es/FormControl'
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos'
@@ -12,9 +12,9 @@ import { StyledBackButton } from '../../styles/StyledBackButton'
 import { StyledTypography } from '../../styles/StyledTypography'
 import { StyledSpacer } from '../../styles/StyledSpacer'
 import { ButtonComponent } from '../../components/ButtonComponent'
-import { defaultColors } from '../../constants/statusColor'
+import { defaultColors } from '../../Constants/statusColor'
 import { axios } from '../../plugins/axios'
-import { API_ROUTES } from '../../constants/apiRoutes'
+import { API_ROUTES } from '../../Constants/apiRoutes'
 
 export const CreatePenaltiesForm = ({
   display,

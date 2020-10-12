@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos'
-import TextField from '@material-ui/core/es/TextField'
+import { TextField } from '@material-ui/core'
 
 import searchIcon from '../assets/svg/search.svg'
 

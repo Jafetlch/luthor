@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 
 import userPhoto from '../assets/img/person_image.jpg'
 import { ButtonComponent } from '../components/ButtonComponent'
-import { userStatusColor } from '../constants/statusColor'
+import { userStatusColor } from '../Constants/statusColor'
 import { StyledCard } from '../styles/StyledCard'
 import { StyledSpacer } from '../styles/StyledSpacer'
 import { StyledAvatar } from '../styles/StyledAvatar'

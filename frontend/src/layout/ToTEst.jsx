@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 
-import { statusColor, userStatusColor } from '../constants/statusColor'
+import { statusColor, userStatusColor } from '../Constants/statusColor'
 import userPhoto from '../assets/img/person_image.jpg'
 
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos'
@@ -22,7 +22,7 @@ import { LinkComponent } from '../components/LinkComponent'
 import Select from '@material-ui/core/Select'
 import InputLabel from '@material-ui/core/InputLabel'
 import FormControl from '@material-ui/core/FormControl'
-import TextField from '@material-ui/core/es/TextField'
+import { TextField } from '@material-ui/core'
 import FormControlLabel from '@material-ui/core/es/FormControlLabel'
 import Checkbox from '@material-ui/core/es/Checkbox'
 import MenuItem from '@material-ui/core/MenuItem'

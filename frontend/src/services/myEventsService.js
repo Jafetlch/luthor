@@ -1,4 +1,4 @@
-import { API_ROUTES } from '../constants/apiRoutes'
+import { API_ROUTES } from '../Constants/apiRoutes'
 import { axios } from '../plugins/axios'
 
 export const myEventsService = async (setData, setLoading) => {
