@@ -1,178 +1,35 @@
-# Luthor Project Backend
+# docker-compose-laravel
+A pretty simplified Docker Compose workflow that sets up a LEMP network of containers for local Laravel development. You can view the full article that inspired this repo [here](https://dev.to/aschmelyun/the-beauty-of-docker-for-local-laravel-development-13c0).
 
-This is a backend of the project.
 
-## API Requests Available
+## Usage
 
-[Watch api details](https://documenter.getpostman.com/view/8214440/SWEB3w8w)
+To get started, make sure you have [Docker installed](https://docs.docker.com/docker-for-mac/install/) on your system, and then clone this repository.
 
-### New Requests
+Next, navigate in your terminal to the directory you cloned this, and spin up the containers for the web server by running `docker-compose up -d --build site`.
 
-```
-/students/filter/{parameter} [get]
-```
+After that completes, follow the steps from the [src/README.md](src/README.md) file to get your Laravel project added in (or create a new blank one).
 
-##### valid parameters
+Bringing up the Docker Compose network with `site` instead of just using `up`, ensures that only our site's containers are brought up at the start, instead of all of the command containers as well. The following are built for our web server, with their exposed ports detailed:
 
-**only rol id 4**
+- **nginx** - `:8080`
+- **mysql** - `:3306`
+- **php** - `:9000`
 
-```
-actives = get active students
-inactives = get inactive students
-penalized = get penalized students
-out = get out students
-indicators = get indicators students out, today assistance, students penalized
-```
+Three additional containers are included that handle Composer, NPM, and Artisan commands *without* having to have these platforms installed on your local computer. Use the following command examples from your project root, modifying them to fit your particular use case.
 
-```
-/students/block-all   [PUT]
-```
+- `docker-compose run --rm composer update`
+- `docker-compose run --rm npm run dev`
+- `docker-compose run --rm artisan migrate` 
 
-##### valid parameters
+## Persistent MySQL Storage
 
-**only rol id 4**
+By default, whenever you bring down the Docker network, your MySQL data will be removed after the containers are destroyed. If you would like to have persistent data that remains after bringing containers down and back up, do the following:
+
+1. Create a `mysql` folder in the project root, alongside the `nginx` and `src` folders.
+2. Under the mysql service in your `docker-compose.yml` file, add the following lines:
 
 ```
-block = 0/1 
-        0 = false
-        1 = true
+volumes:
+  - ./mysql:/var/lib/mysql
 ```
-
-```
-/students/   [post]
-```
-
-##### valid parameters
-
-**available to rol id 4 and 6 **
-
-```
-is_active = 0/1            : set if student is active
-code    = code_studen      : student code
-```
-
-```
-/alerts/   [get]
-```
-
-##### valid parameters
-
-**available to rol id 4 and 3**
-
-```
-no parameter needed
-```
-
-```
-/alerts/   [post]
-```
-
-##### valid parameters
-
-**available to rol id 4 and 3**
-
-```
-preceptor params
-    content  : content alert
-    code     : student to sent alert, can be nullable if the alert is for all students
-
-monitor params
-    content  : content alert
-```
-
-```
-/actual-event/   [get]
-```
-
-##### valid parameters
-
-**available to rol id 4 and 3**
-
-```
-     Get  events of the last  hour
-```
-
-## Database config
-
-To run the backend you will need the database name
-
-```
-database_name: db_luthor
-```
-
-# run commands
-
-### Installation
-
-### Composer install
-
-```
-
-composer install
-```
-
-### Config ENV
-
-Example
-
-```
-
-DB_CONNECTION=mysql
-
-DB_HOST=127.0.0.1
-
-DB_PORT=3306
-
-DB_DATABASE=db_luthor
-
-DB_USERNAME=root
-
-DB_PASSWORD=
-```
-
-### Config CORS
-
-```
-
-php artisan vendor:publish --tag="cors"
-```
-
-More info on [CORS Middleware for Laravel](https://github.com/fruitcake/laravel-cors#configuration)
-
-### Run migrations and seeders
-
-```
-
-php artisan migrate --seed
-```
-
-### Install passport
-
-```
-
-php artisan passport:install
-```
-
-### Generate laravel keys
-
-```
-
-php artisan key:generate
-```
-
-### Server Start
-
-```
-
-php artisan serve
-```
-
-# Changes by F34th3R
-
-
-
-```
-
-```
-
-
