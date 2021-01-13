@@ -1,10 +1,9 @@
-import { userStore, UserModel } from './auth.store'
+import { userStore, UserStoreModel } from './user.store'
 
 export interface Model {
-  userStore: UserModel
+  userStore: UserStoreModel
 }
 
 export const models: Model = {
   userStore
 }
-
